@@ -1,0 +1,25 @@
+PATH
+  remote: .
+  specs:
+    oneroster (0.1)
+      httparty
+      multi_json
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    httparty (0.14.0)
+      multi_xml (>= 0.5.2)
+    multi_json (1.12.1)
+    multi_xml (0.5.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  httparty
+  multi_json
+  oneroster!
+
+BUNDLED WITH
+   1.13.1
