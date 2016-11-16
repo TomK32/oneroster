@@ -11,14 +11,16 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [
     "README"
   ]
-  s.add_dependency 'httparty'
-  s.add_dependency 'multi_json'
+  s.add_dependency 'flexirest'
+  s.add_dependency 'oauth'
+  s.add_dependency 'addressable'
   s.files = [
     "Gemfile",
     "LICENSE",
     "README",
     "lib/oneroster.rb",
-    "lib/oneroster/client.rb",
+    "lib/oneroster/apibase.rb",
+    "lib/oneroster/endpoints.rb",
     "oneroster.gemspec"
     ]
 end
