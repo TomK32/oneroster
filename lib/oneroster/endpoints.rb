@@ -13,7 +13,7 @@ module Oneroster
     get :all, "/courses"
   end
   class District < Oneroster::ApiBase
-    get :all, "/districts"
+    get :all, "/districts", ignore_root: 'orgs'
   end
   class Enrollment < Oneroster::ApiBase
     get :all, "/enrollments"

@@ -32,13 +32,14 @@ module Oneroster
               :nonce => nonce
       }
       url = Addressable::URI.parse(request.url)
-      url.query_values = (url.query_values || {}).merge request.get_params
+      if request.get_params.any?
+        url.query_values = (url.query_values || {}).merge request.get_params
+      end
       url = url.to_s
 
       req = consumer.create_signed_request(request.method[:method], url, nil, options)
       
       request.headers['Authorization'] = req['Authorization']
-      request.headers['Content-Type'] = nil
     end
   end
 end
