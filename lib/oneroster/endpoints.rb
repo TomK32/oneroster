@@ -8,6 +8,8 @@ module Oneroster
   end
   class Class < Oneroster::ApiBase
     get :all, "/classes", ignore_root: 'classes'
+    get :teachers, "/classes/:id/teachers", ignore_root: 'users'
+    get :students, "/classes/:id/students", ignore_root: 'users'
   end
   class Course < Oneroster::ApiBase
     get :all, "/courses", ignore_root: 'courses'
@@ -32,6 +34,7 @@ module Oneroster
   end
   class School < Oneroster::ApiBase
     get :all, "/schools", ignore_root: 'orgs'
+    get :find, "/schools/:id", ignore_root: 'org'
   end
   class Scoregroup < Oneroster::ApiBase
     get :all, "/scoreGroups", ignore_root: 'scoreGroups'
