@@ -1,5 +1,6 @@
 require 'oauth'
 require 'flexirest'
+require 'addressable'
 
 module Oneroster
   class ApiBase < Flexirest::Base
