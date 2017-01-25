@@ -11,7 +11,8 @@ module Oneroster
       self.consumer_secret = secret
     end
 
-    base_url 'https://oneroster.infinitecampus.org/campus/oneroster/entropyMaster/ims/oneroster/v1p1/'
+    BASE_URL = 'https://oneroster.infinitecampus.org/campus/oneroster/entropyMaster/ims/oneroster/v1p1/'
+    base_url BASE_URL
     def self.inherited(klass)
       super(klass)
       klass.verbose!
