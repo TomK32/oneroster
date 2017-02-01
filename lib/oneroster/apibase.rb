@@ -8,7 +8,9 @@ module Oneroster
 
     def self.api_auth_credentials(key, secret)
       self.consumer_key = key
+      raise "No key" if key.blank?
       self.consumer_secret = secret
+      raise "No secret" if secret.blank?
     end
 
     BASE_URL = 'https://oneroster.infinitecampus.org/campus/oneroster/entropyMaster/ims/oneroster/v1p1/'
